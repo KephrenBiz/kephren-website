@@ -701,6 +701,14 @@ section.tint { background: var(--mist-50); }
     .team-image-wrap img{
         height:300px;
     }
+
+    .rfi-panel {
+        grid-template-columns: 1fr;
+    }
+
+    .rfi-points {
+        grid-template-columns: 1fr;
+    }
 }
 /* ─── Team ─── */
 /* .team-grid {
@@ -856,6 +864,101 @@ section.tint { background: var(--mist-50); }
   font-size: 12px;
   color: rgba(255,255,255,0.8);
   margin-top: 2px;
+}
+
+/* ─── Exporter RFI ─── */
+.rfi-section {
+  background: linear-gradient(180deg, var(--white) 0%, var(--mist-50) 100%);
+}
+
+.rfi-panel {
+  display: grid;
+  grid-template-columns: 1.5fr 0.9fr;
+  gap: 32px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: clamp(24px, 3vw, 36px);
+  align-items: center;
+}
+
+.rfi-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.rfi-copy h3 {
+  font-size: clamp(22px, 2vw, 28px);
+  line-height: 1.2;
+}
+
+.rfi-copy p {
+  color: var(--slate-500);
+  font-size: 15px;
+  line-height: 1.7;
+}
+
+.rfi-points {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(180px, 1fr));
+  gap: 12px 18px;
+  margin-top: 12px;
+}
+
+.rfi-points li {
+  position: relative;
+  padding-left: 18px;
+  color: var(--ink-700);
+  font-size: 14px;
+}
+
+.rfi-points li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--ocean-500);
+}
+
+.rfi-download {
+  background: linear-gradient(180deg, var(--navy-950) 0%, var(--navy-800) 100%);
+  border-radius: 18px;
+  padding: 28px 24px;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  min-height: 100%;
+}
+
+.rfi-badge {
+  display: inline-flex;
+  align-self: flex-start;
+  background: rgba(63, 169, 214, 0.15);
+  border: 1px solid rgba(108, 196, 232, 0.4);
+  color: var(--ocean-300);
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 10.5px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 8px 10px;
+  border-radius: 999px;
+}
+
+.rfi-file {
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.04em;
+}
+
+.rfi-download .btn-primary {
+  margin-top: auto;
 }
 
 /* ─── Market ─── */
