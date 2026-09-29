@@ -117,8 +117,8 @@ ul { list-style: none; padding: 0; margin: 0; }
   justify-content: space-between;
   align-items: center;
   padding: 10px 48px;
-  flex-wrap: nowrap;
-  gap: 12px 24px;
+  flex-wrap: wrap;
+  gap: 6px 24px;
 }
 .utility-bar a {
   color: var(--slate-300);
@@ -1362,31 +1362,19 @@ footer .brand-word span { color: var(--ocean-400); }
 @media (max-width: 768px) {
   .utility-bar .wrap {
     padding: 10px 20px;
-    justify-content: space-between;
-    gap: 8px;
-    flex-wrap: nowrap;
-    align-items: flex-start;
-  }
-  .utility-bar .wrap > span {
-    flex: 1 1 auto;
-    min-width: 0;
-    line-height: 1.5;
-    white-space: normal;
+    justify-content: center;
   }
   .utility-download {
     display: inline-flex;
     padding: 7px 10px;
     letter-spacing: 0.06em;
-    flex-shrink: 0;
-    margin-top: 1px;
   }
   .utility-links {
     display: flex;
     gap: 12px;
-    justify-content: flex-end;
-    align-items: center;
-    flex-wrap: nowrap;
-    flex-shrink: 0;
+    justify-content: center;
+    width: 100%;
+    flex-wrap: wrap;
   }
   .utility-links a:not(.utility-download) {
     display: none;
